@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async with Web Worker</title>
+    <script src="PrimeWorker.js"></script>
+    <style>
+      body {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        margin: 20px;
+      }
+
+      #primeContainer {
+        border: solid 1px black;
+        padding: 3px;
+        height: 300px;
+        max-width: 500px;
+        overflow: scroll;
+        overflow-x: hidden;
+        font-size: x-small;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      input {
+        width: 80px;
+      }
+
+      button {
+        padding: 3px;
+      }
+
+      p {
+        margin-bottom: 3px;
+      }
+
+      #status {
+        color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Do a prime number search from <input id="from" value="1" /> to
+      <input id="to" value="2000000" size="200" />.
+    </p>
+    <button onclick="doSearch()">Start Searching</button>
+
+    <div id="primeContainer"></div>
+
+    <div id="status"></div>
+  </body>
+</html>
